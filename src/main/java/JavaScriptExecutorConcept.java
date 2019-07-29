@@ -35,12 +35,30 @@ public class JavaScriptExecutorConcept
         //Copy the screenshot to desired location by Copy mathod
         FileUtils.copyFile(src , new File("/Users/nimal/testOne/src/main/java/element.png"));
 
+        //GIVING ALERT MESSAGE TO THE BUG SCREENSHOT
+        //generalAlert(driver,"There is an issue with ---------");
+
+        //CLICKING ON ANY ELEMENT USIG JAVASCRIPT EXECUTOR
+        clickElementByJS(loginBtn,driver);
+
+        //REFRESH THE PAGE
+        //1)By using Selenium
+        driver.navigate().refresh();
+
+        //2)By using JS
+        driverRefresh(driver);
+
+        //GET THE TITLE OF PAGE BY JS
+        System.out.println(getTitleByJS(driver));
+
+        //SCROLL PAGE DOWN
+        scrollPageDown(driver);
     }
     public static void flash(WebElement element,WebDriver driver)
     {
         JavascriptExecutor js = ((JavascriptExecutor) driver);
         String bgcolor = element.getCssValue("backgroundColor");
-        for(int i=0;i<100;i++)
+        for(int i=0;i<10;i++)
         {
             changeColor("rgb(0,200,0)",element,driver);
             changeColor(bgcolor,element,driver);
@@ -63,4 +81,30 @@ public class JavaScriptExecutorConcept
      JavascriptExecutor js = ((JavascriptExecutor) driver);
      js.executeScript("arguments[0].style.border='3px solid red'",element);
  }
+ public static void generalAlert(WebDriver driver,String message)
+ {
+     JavascriptExecutor js = ((JavascriptExecutor) driver);
+     js.executeScript("alert('"+message+"')");
+ }
+ public static  void  clickElementByJS(WebElement element,WebDriver driver)
+ {
+     JavascriptExecutor js = ((JavascriptExecutor) driver);
+     js.executeScript("arguments[0].click()",element);
+ }
+public static void driverRefresh(WebDriver driver)
+{
+    JavascriptExecutor js = ((JavascriptExecutor) driver);
+    js.executeScript("history.go(0)");
+}
+public static String getTitleByJS(WebDriver driver)
+{
+    JavascriptExecutor js = ((JavascriptExecutor) driver);
+    String title = js.executeScript("return document.title;").toString();
+    return title;
+}
+public static void scrollPageDown(WebDriver driver)
+{
+    JavascriptExecutor js = ((JavascriptExecutor)driver);
+    js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+}
 }
