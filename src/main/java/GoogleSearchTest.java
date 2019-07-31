@@ -13,7 +13,7 @@ public class GoogleSearchTest
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
 
-        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("java");
+        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("javagit ");
         List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='sbl1']"));
         System.out.println("Total no.of suggestion in search box:::========>"+list.size());
 
