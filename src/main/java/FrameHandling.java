@@ -29,17 +29,17 @@ public class FrameHandling
         driver.findElement(By.xpath("//input[@type='submit']")).click();
 
         //After the above click, it will switch to the selected frame
-      //  driver.switchTo().frame("mainpanel");
-        //Thread.sleep(3000);
-
-        //Thread.sleep(3000);
-        //driver.findElement(By.xpath("//a[@title='Contacts']")).click(); //Clicking on the Contacts link
-
-        driver.switchTo().frame("leftpanel");
+        driver.switchTo().frame("mainpanel");
         Thread.sleep(3000);
 
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//a[@title='Messages']")).click();
+        driver.findElement(By.xpath("//a[@title='Contacts']")).click(); //Clicking on the Contacts link
+
+      /* driver.switchTo().frame("leftpanel");
+        Thread.sleep(3000);
+
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[@title='Messages']")).click();*/
 
 
 
