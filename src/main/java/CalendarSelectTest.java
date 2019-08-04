@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +33,7 @@ public class CalendarSelectTest
 
 
        Thread.sleep(3000);
-        String date = "1-September-2019";
+        String date = "31-September-2019";
         String dateArr[] = date.split("-"); //contains 18,september,2017
         String day = dateArr[0];
         String month = dateArr[1];
@@ -57,12 +58,21 @@ public class CalendarSelectTest
 
         boolean flag=false;
         final int totalWeekDays=7;
+        String dayVal=null;
         for(int rowNum=2;rowNum<=7;rowNum++ )
         {
             for(int colNum=1;colNum<=7;colNum++)
             {
-             String dayVal = driver.findElement(By.xpath(BeforeXpath+rowNum+AfterXpath+colNum+"]")).getText();
-             System.out.println(dayVal);
+                try
+                {
+                    dayVal = driver.findElement(By.xpath(BeforeXpath+rowNum+AfterXpath+colNum+"]")).getText();
+                }catch(NoSuchElementException e)
+                {
+                    System.out.println("Please enter a correct date value");
+                    flag=false;
+                    break;
+                }
+                System.out.println(dayVal);
              if(dayVal.equals(day))
              {
                  driver.findElement(By.xpath(BeforeXpath+rowNum+AfterXpath+colNum+"]")).click();
