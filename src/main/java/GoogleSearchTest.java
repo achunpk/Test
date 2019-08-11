@@ -13,9 +13,14 @@ public class GoogleSearchTest
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
 
-        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("javagit ");
-        List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant::div[@class='sbl1']"));
+        driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("java");
+        List<WebElement> list = driver.findElements(By.xpath("//ul[@role='listbox']//li/descendant:://span[contains(text(),'java')]"));
         System.out.println("Total no.of suggestion in search box:::========>"+list.size());
+
+       /* for(int i=0;i<list.size();i++)
+        {
+            System.out.println(list.get(i));
+        }*/
 
     }
 
