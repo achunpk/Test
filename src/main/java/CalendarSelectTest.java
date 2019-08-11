@@ -14,7 +14,7 @@ public class CalendarSelectTest
     public static void main(String args[]) throws InterruptedException
     {
         WebDriver driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver2", "C:/Users/nimal/testOne/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver1", "C:/Users/nimal/testOne/chromedriver.exe");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 
