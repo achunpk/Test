@@ -8,7 +8,7 @@ public class Facebook_login
 {
     public static void Locator()
     {
-        System.setProperty("webdriver.chrome.driver","C:/Users/nimal/testOne/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:/Users/nimal/Automation-selenium/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com");
         //1.Xpath
@@ -55,7 +55,7 @@ public class Facebook_login
     public void testEmailGenerator()
     {
 
-        System.setProperty("webdriver.chrome.driver","C:/Users/nimal/testOne/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:/Users/nimal/Automation-selenium/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com");
 
