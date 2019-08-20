@@ -12,15 +12,15 @@ import java.util.concurrent.TimeUnit;
 public class CalendarSelectTest
 {
     public static void main(String args[]) throws InterruptedException
-    {
-        WebDriver driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver1", "C:/Users/nimal/testOne/chromedriver.exe");
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
+        {
+            WebDriver driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver1", "C:/Users/nimal/testOne/chromedriver.exe");
+            driver.manage().window().maximize();
+            driver.manage().deleteAllCookies();
 
-        //dynamic wait
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            //dynamic wait
+            driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         driver.get("https://classic.crmpro.com/");
         driver.findElement(By.name("username")).sendKeys("aswathi");
