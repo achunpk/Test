@@ -46,7 +46,7 @@ public class DefaultPage {
         WebDriver driver;
 
         //Setting the webdriver.chrome.driver property to its executable's location
-       System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/testOne/chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
        // System.setProperty("webdriver.gecko.driver", "C:/Users/nimal/testOne/geckodriver.exe");
 
         //Instantiating driver object
