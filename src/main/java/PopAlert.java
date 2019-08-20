@@ -7,7 +7,7 @@ public class PopAlert {
 
     public static void main(String[] args) throws InterruptedException
     {
-      System.setProperty("webdriver.chrome.driver","C:/Users/nimal/testOne/chromedriver.exe");
+      System.setProperty("webdriver.chrome.driver","C:/Users/nimal/Automation-selenium/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 
