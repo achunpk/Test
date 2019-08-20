@@ -10,7 +10,7 @@ public class JavaScriptExecutorConcept
 {
     public static void main(String[] args) throws IOException {
         WebDriver driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/testOne/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
