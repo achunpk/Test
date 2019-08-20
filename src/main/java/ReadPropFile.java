@@ -28,7 +28,7 @@ public class ReadPropFile
         if(browsername.equals("chrome"))
         {
 
-            System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/testOne/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
             WebDriver driver = new ChromeDriver();
             driver.get(url);
             driver.findElement(By.xpath(prop.getProperty("email_Xpath"))).sendKeys(prop.getProperty("email"));
