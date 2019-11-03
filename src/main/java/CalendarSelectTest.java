@@ -13,7 +13,7 @@ public class CalendarSelectTest
 {
     public static void main(String args[]) throws InterruptedException
         {
-            System.setProperty("webdriver.chrome.driver1","./chromedriver_78.exe");
+            System.setProperty("webdriver.chrome.drivern","./chromedriver_78.exe");
             WebDriver driver = new ChromeDriver();
 
             driver.manage().window().maximize();
