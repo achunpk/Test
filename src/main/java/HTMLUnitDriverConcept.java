@@ -7,10 +7,10 @@ import java.util.concurrent.TimeUnit;
 
 public class HTMLUnitDriverConcept {
     public static void main(String[] args) throws InterruptedException {
-       //WebDriver driver = new ChromeDriver();
-        WebDriver driver = new HtmlUnitDriver();
-        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
 
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
+        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new HtmlUnitDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 

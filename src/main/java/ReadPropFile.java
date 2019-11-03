@@ -13,7 +13,7 @@ public class ReadPropFile
     {
         Properties prop = new Properties();
 
-        FileInputStream ip = new FileInputStream("C:/Users/nimal/testOne/src/main/java/Config.properties");
+        FileInputStream ip = new FileInputStream("./Config.properties");
 
         prop.load(ip);
 
@@ -28,7 +28,7 @@ public class ReadPropFile
         if(browsername.equals("chrome"))
         {
 
-            System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
             WebDriver driver = new ChromeDriver();
             driver.get(url);
             driver.findElement(By.xpath(prop.getProperty("email_Xpath"))).sendKeys(prop.getProperty("email"));

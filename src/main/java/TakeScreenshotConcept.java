@@ -14,8 +14,8 @@ import java.util.concurrent.TimeUnit;
 public class TakeScreenshotConcept {
     public static void main(String[] args) throws IOException
     {
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
         WebDriver driver = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
         driver.manage().window().maximize(); //maximisie window
         driver.manage().deleteAllCookies(); //delete all cookies
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);

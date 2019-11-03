@@ -16,8 +16,9 @@ public class HeadlessChrome {
         options.addArguments("window-size=1400,800");
         options.addArguments("headless");
 
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
         WebDriver driver = new ChromeDriver(options);
-        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
+
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 

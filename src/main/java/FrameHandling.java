@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 public class FrameHandling
 {
     public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
         WebDriver driver=new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();

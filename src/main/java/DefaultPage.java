@@ -8,15 +8,12 @@ public class DefaultPage {
     public static void launchFirstPage( )throws InterruptedException
     {
 
-
-
         //Creating a driver object referencing WebDriver interface
-        WebDriver driver;
 
         //Setting the webdriver.chrome.driver property to its executable's location
-         System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/testOne/chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
          //System.setProperty("webdriver.gecko.driver", "C:/Users/nimal/testOne/geckodriver.exe");
-
+        WebDriver driver;
 
         //Instantiating driver object
          driver = new ChromeDriver();
@@ -43,11 +40,11 @@ public class DefaultPage {
 
 
         //Creating a driver object referencing WebDriver interface
-        WebDriver driver;
 
         //Setting the webdriver.chrome.driver property to its executable's location
-       System.setProperty("webdriver.chrome.driver", "C:/Users/nimal/Automation-selenium/chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "./chromedriver_78.exe");
        // System.setProperty("webdriver.gecko.driver", "C:/Users/nimal/testOne/geckodriver.exe");
+        WebDriver driver;
 
         //Instantiating driver object
         driver = new ChromeDriver();
